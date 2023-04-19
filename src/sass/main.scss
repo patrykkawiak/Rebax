@@ -12,91 +12,12 @@ html {
 	box-sizing: border-box;
 }
 
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Montserrat', sans-serif;
 }
 
-// SEKCJA ABOUTUS
-.aboutus {
-	&_container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 4rem;
-		.firstcard,
-		.secondcard {
-			display: flex;
-			flex-direction: column;
-			gap: 2rem;
-			.aboutus_content {
-				display: flex;
-				flex-direction: column;
-				gap: 2rem;
-			}
-		}
-	}
-
-	.section_text {
-		font-size: 1.2rem;
-		line-height: 20px;
-	}
-	.img {
-		display: flex;
-		flex-direction: column;
-
-		img {
-			height: 25rem;
-			min-width: 100%;
-			border-radius: 8px;
-		}
-	}
-}
-
-@media (min-width: 576px) {
-	html {
-		font-size: 68.75%;
-	}
-}
-@media (min-width: 768px) {
-	html {
-		font-size: 75%;
-	}
-	.aboutus {
-		&_container {
-			.secondcard {
-				display: flex;
-				flex-direction: row-reverse;
-				gap: 2rem;
-				.aboutus_content {
-					width: 50%;
-					padding: 0 3rem;
-				}
-				.img {
-					width: 50%;
-				}
-			}
-			.firstcard {
-				display: flex;
-				flex-direction: row;
-				gap: 2rem;
-				.aboutus_content {
-					width: 50%;
-					padding: 0 3rem;
-				}
-				.img {
-					width: 50%;
-				}
-			}
-		}
-	}
-}
-@media (min-width: 992px) {
-	html {
-		font-size: 81.25%;
-	}
-}
-@media (min-width: 1200px) {
-	html {
-		font-size: 87.5%;
-	}
-}
