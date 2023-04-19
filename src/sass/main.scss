@@ -1,3 +1,7 @@
+@use 'utilities/colors' as *;
+@use 'utilities/classes';
+@use 'utilities/media';
+
 *,
 *::after,
 *::before {
@@ -6,11 +10,8 @@
 	box-sizing: border-box;
 }
 
-html {
-	font-size: 62.5%;
-	scroll-behavior: smooth;
+body {
+	font-family: 'Montserrat', sans-serif;
 }
 
-.section-padding {
-	padding: 4rem 2rem;
-}
+
