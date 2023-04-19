@@ -1,0 +1,25 @@
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+@media (min-width: 576px) {
+	html {
+		font-size: 68.75%;
+	}
+}
+@media (min-width: 768px) {
+	html {
+		font-size: 75%;
+	}
+}
+@media (min-width: 992px) {
+	html {
+		font-size: 81.25%;
+	}
+}
+@media (min-width: 1200px) {
+	html {
+		font-size: 87.5%;
+	}
+}
