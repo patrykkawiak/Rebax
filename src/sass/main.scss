@@ -21,3 +21,152 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
+// SEKCJA ABOUTUS
+.aboutus {
+	padding: 4rem 2rem;
+	&_container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 4rem;
+		.firstcard,
+		.secondcard {
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+			.aboutus_content {
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
+			}
+		}
+	}
+
+	.section_text {
+		font-size: 1.2rem;
+		line-height: 20px;
+	}
+	.img {
+		display: flex;
+		flex-direction: column;
+
+		img {
+			height: 25rem;
+			min-width: 100%;
+			border-radius: 8px;
+			object-fit: cover;
+		}
+	}
+}
+.second-baner {
+	height: 8rem;
+	// padding: 0 2rem 0 2rem;
+
+	width: 100%;
+	background-color: $main-color;
+	.baner-items {
+		height: 100%;
+		display: flex;
+		// justify-content: center;
+		// gap: 3rem;
+		justify-content: space-evenly;
+		align-items: center;
+		.baner-item {
+			position: relative;
+			display: flex;
+			align-items: center;
+			.baner-icon {
+				position: absolute;
+				z-index: 1;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: $font-white;
+				height: 4rem;
+				width: 4rem;
+				border-radius: 50%;
+				border: 2px solid $font-white;
+				background: $main-color;
+				left: -0.5rem;
+				i {
+					font-size: 2.5rem;
+					color: $font-white;
+				}
+			}
+
+			.baner-text {
+				z-index: 0;
+				color: $font-white;
+				padding: 0.7rem 0.7rem 0.7rem 4rem;
+				background: transparent;
+				border-radius: 8px;
+				border: 2px solid $font-white;
+				font-size: 1rem;
+			}
+		}
+		.baner-item:nth-child(3) {
+			display: none;
+
+			.baner-icon {
+				top: -0.5rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	html {
+		font-size: 68.75%;
+	}
+
+	.second-baner {
+		.baner-items {
+			.baner-item:nth-child(3) {
+				display: block;
+			}
+		}
+	}
+}
+@media (min-width: 768px) {
+	html {
+		font-size: 75%;
+	}
+	.aboutus {
+		&_container {
+			.secondcard {
+				display: flex;
+				flex-direction: row-reverse;
+				gap: 2rem;
+				.aboutus_content {
+					width: 50%;
+					padding: 0 3rem;
+				}
+				.img {
+					width: 50%;
+				}
+			}
+			.firstcard {
+				display: flex;
+				flex-direction: row;
+				gap: 2rem;
+				.aboutus_content {
+					width: 50%;
+					padding: 0 3rem;
+				}
+				.img {
+					width: 50%;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	html {
+		font-size: 81.25%;
+	}
+}
+@media (min-width: 1200px) {
+	html {
+		font-size: 87.5%;
+	}
+}
