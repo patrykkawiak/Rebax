@@ -59,16 +59,13 @@ body {
 	}
 }
 .second-baner {
-	height: 8rem;
-	// padding: 0 2rem 0 2rem;
+	height: 9rem;
 
 	width: 100%;
 	background-color: $main-color;
 	.baner-items {
 		height: 100%;
 		display: flex;
-		// justify-content: center;
-		// gap: 3rem;
 		justify-content: space-evenly;
 		align-items: center;
 		.baner-item {
@@ -108,7 +105,92 @@ body {
 			display: none;
 
 			.baner-icon {
-				top: -0.5rem;
+				top: -0.7rem;
+			}
+		}
+	}
+}
+
+.materials {
+	padding-bottom: 4rem;
+	.section-heading {
+		padding-bottom: 4rem;
+	}
+
+	.materials-cards {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4rem;
+		justify-content: center;
+		.materials-card {
+			max-width: 30rem;
+			display: flex;
+			border-radius: 8px;
+			overflow: hidden;
+			flex-direction: column;
+			.card-img {
+				height: 15rem;
+				background-image: url('../../dist/img/bgi\(1\).jpg');
+				background-size: cover;
+				background-position: center;
+
+				width: 100%;
+			}
+			.card-content {
+				position: relative;
+
+				border: 1px solid rgba(0, 0, 0, 0.2);
+				border-top: transparent;
+				border-bottom-left-radius: 8px;
+				border-bottom-right-radius: 8px;
+				padding: 1.5rem;
+				padding-top: 3rem;
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
+
+				.card-icon {
+					position: absolute;
+					top: -2.5rem;
+					right: 2rem;
+					height: 5rem;
+					width: 5rem;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					background-color: white;
+					border: 1px solid rgba(0, 0, 0, 0.2);
+					border-radius: 50%;
+					z-index: 5;
+
+					i {
+						font-size: 2.5rem;
+						color: $main-color;
+					}
+				}
+
+				.card-heading {
+					font-size: 1.8rem;
+					font-weight: 500;
+				}
+
+				.card-text {
+					color: $font-light;
+					font-weight: 500;
+					font-size: 1.2rem;
+				}
+				.card-link {
+					text-decoration: none;
+					color: $font-white;
+					background-color: $main-color;
+					border-radius: 8px;
+					width: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 0.7rem;
+					font-size: 1.3rem;
+				}
 			}
 		}
 	}
@@ -203,6 +285,7 @@ footer {
 			}
 		}
 	}
+	
 }
 @media (min-width: 768px) {
 	html {
@@ -255,11 +338,40 @@ footer {
 			}
 		}
 	}
+	
+	.materials {
+		.materials-cards {
+			.materials-card {
+				max-width: 25rem;
+			}
+		}
+	}
 }
 
 @media (min-width: 992px) {
 	html {
 		font-size: 81.25%;
+	}
+
+	.second-baner {
+		.baner-items {
+			.baner-item {
+				.baner-icon {
+					width: 4.5rem;
+					height: 4.5rem;
+				}
+				.baner-text {
+					padding-left: 4.5rem;
+				}
+			}
+		}
+	}
+	.materials {
+		.materials-cards {
+			.materials-card {
+				max-width: 24rem;
+			}
+		}
 	}
 }
 @media (min-width: 1200px) {
