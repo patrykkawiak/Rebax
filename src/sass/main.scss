@@ -500,6 +500,34 @@ footer {
 			}
 		}
 	}
+	/* nav */
+	.burger-icon {
+		display: none;
+	}
+	nav {
+		.nav-cnt {
+			.mobile-nav {
+				display: none;
+			}
+			.desktop-nav {
+				display: flex;
+				align-items: center;
+				gap: 2rem;
+			}
+		}
+	}
+	/* header */
+	header {
+		.header-cnt {
+			display: flex;
+			.header-img {
+				width: 40%;
+				display: block;
+				max-width: 30rem;
+				object-fit: cover;
+			}
+		}
+	}
 }
 @media (min-width: 992px) {
 	html {
