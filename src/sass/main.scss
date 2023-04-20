@@ -123,7 +123,7 @@ body {
 		gap: 4rem;
 		justify-content: center;
 		.materials-card {
-			max-width: 35rem;
+			max-width: 30rem;
 			display: flex;
 			border-radius: 8px;
 			overflow: hidden;
@@ -208,6 +208,7 @@ body {
 			}
 		}
 	}
+	
 }
 @media (min-width: 768px) {
 	html {
@@ -244,7 +245,7 @@ body {
 	.materials {
 		.materials-cards {
 			.materials-card {
-				max-width: 27rem;
+				max-width: 25rem;
 			}
 		}
 	}
@@ -264,6 +265,13 @@ body {
 				.baner-text {
 					padding-left: 4.5rem;
 				}
+			}
+		}
+	}
+	.materials {
+		.materials-cards {
+			.materials-card {
+				max-width: 24rem;
 			}
 		}
 	}
