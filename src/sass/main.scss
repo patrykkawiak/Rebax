@@ -114,6 +114,83 @@ body {
 	}
 }
 
+// kontakt
+.contact {
+	padding: 4rem 2rem 0;
+}
+.contact_container {
+	display: flex;
+	flex-direction: column;
+	.contact_name_box {
+		display: flex;
+		flex-direction: column;
+		.contact_name {
+			font-size: 1.4rem;
+			font-weight: 600;
+		}
+	}
+	.contact_text_box {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		.contact_text {
+			font-size: 1.2rem;
+			color: #494949;
+		}
+	}
+	.contact_cnt {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+	.contact_items {
+		display: flex;
+		gap: 0.7rem;
+	}
+	.contact-icon {
+		padding: 0.5rem 1rem;
+		font-size: 2.5rem;
+		color: $main-color;
+	}
+	.contact_box {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+		.contact_form {
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+			width: 100%;
+		}
+	}
+	.container_for_contact_form_and_map {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	.map {
+		width: 100%;
+		margin-top: 2rem;
+	}
+}
+//
+
+// FOOTER
+footer {
+	background-color: $main-color;
+	color: white;
+	font-size: 1.2rem;
+	display: flex;
+	align-items: center;
+	padding: 1rem 2rem;
+	a {
+		text-decoration: none;
+		color: white;
+		margin-left: auto;
+		font-size: 2.5rem;
+	}
+}
+//
 @media (min-width: 576px) {
 	html {
 		font-size: 68.75%;
@@ -159,7 +236,27 @@ body {
 			}
 		}
 	}
+	.contact {
+		padding: 4rem 2rem;
+		.contact_container {
+			.contact_box {
+				width: 100%;
+				.contact_form {
+					width: 50%;
+				}
+			}
+			.container_for_contact_form_and_map {
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+			}
+			.map {
+				width: 50%;
+			}
+		}
+	}
 }
+
 @media (min-width: 992px) {
 	html {
 		font-size: 81.25%;
