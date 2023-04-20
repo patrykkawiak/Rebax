@@ -43,8 +43,9 @@ body {
 	}
 
 	.section_text {
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 		line-height: 20px;
+		color: #494949;
 	}
 	.img {
 		display: flex;
@@ -216,7 +217,7 @@ body {
 		flex-direction: column;
 		gap: 0.5rem;
 		.contact_text {
-			font-size: 1.2rem;
+			font-size: 1.4rem;
 			color: #494949;
 		}
 	}
