@@ -231,7 +231,7 @@ header {
 
 		img {
 			height: 25rem;
-			min-width: 100%;
+			width: 100%;
 			border-radius: 8px;
 			object-fit: cover;
 		}
@@ -715,7 +715,7 @@ footer {
 @keyframes reval1 {
 	from {
 		opacity: 0;
-		transform: scale(0.8) translateY(2rem); 
+		transform: scale(0.8) translateY(2rem);
 	}
 
 	to {
