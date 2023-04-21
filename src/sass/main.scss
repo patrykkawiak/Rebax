@@ -1,9 +1,6 @@
 @use 'utilities/colors' as *;
 @use 'utilities/classes';
-html {
-	font-size: 62.5%;
-	scroll-behavior: smooth;
-}
+
 *,
 *::after,
 *::before {
@@ -15,6 +12,7 @@ html {
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+	scroll-padding-top: 3rem;
 }
 
 body {
@@ -575,6 +573,7 @@ footer {
 @media (min-width: 768px) {
 	html {
 		font-size: 75%;
+		scroll-padding-top: 4rem;
 	}
 	.aboutus {
 		&_container {
