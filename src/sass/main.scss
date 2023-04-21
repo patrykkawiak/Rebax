@@ -483,6 +483,7 @@ footer {
 			position: relative;
 			display: flex;
 			overflow: hidden;
+			border-radius: 8px;
 			height: 30rem;
 			width: 40rem;
 		}
@@ -699,6 +700,15 @@ footer {
 @media (min-width: 1200px) {
 	html {
 		font-size: 87.5%;
+	}
+	.galery {
+		.slider-container {
+			.slider {
+				display: block;
+				height: 40rem;
+				width: 65rem;
+			}
+		}
 	}
 }
 
