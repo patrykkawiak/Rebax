@@ -220,7 +220,7 @@ header {
 
 	.section_text {
 		font-size: 1.4rem;
-		line-height: 25px;
+		line-height: 30px;
 		font-weight: 300;
 		color: #494949;
 	}
@@ -396,7 +396,11 @@ header {
 		gap: 0.5rem;
 		.contact_text {
 			font-size: 1.4rem;
+			line-height: 18px;
 			color: #494949;
+		}
+		strong {
+			font-weight: 500;
 		}
 	}
 	.contact_cnt {
@@ -407,10 +411,16 @@ header {
 	.contact_items {
 		display: flex;
 		gap: 0.7rem;
+		margin-left: 3.5rem;
+		position: relative;
 	}
 	.contact-icon {
 		padding: 0.5rem 1rem;
 		font-size: 2.5rem;
+		position: absolute;
+		top: 0px;
+		left: 0;
+		transform: translate(-100%, -22.2%);
 		color: $main-color;
 	}
 	.contact_box {
@@ -595,6 +605,9 @@ footer {
 				width: 100%;
 				.contact_form {
 					width: 50%;
+				}
+				.contact_text {
+					line-height: 30px;
 				}
 			}
 			.container_for_contact_form_and_map {
