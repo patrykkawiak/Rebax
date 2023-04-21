@@ -101,8 +101,7 @@ createAllDots();
 nextBtn.addEventListener('click', handleRightArrow);
 prevBtn.addEventListener('click', handleLeftArrow);
 
-
-// sroll 
+// sroll
 
 const revalSection = document.querySelectorAll('.reval-section');
 
@@ -131,8 +130,34 @@ const handleReval = () => {
 	});
 };
 
-
 window.addEventListener('scroll', handleReval);
 window.addEventListener('DOMContentLoaded', handleFirstReval);
 window.addEventListener('DOMContentLoaded', handleSecondReval);
 window.addEventListener('DOMContentLoaded', handleThirdReval);
+
+// scroll spy
+
+const handleScrollSpy = () => {
+	let sectionArr = [];
+
+	const sections = document.querySelectorAll('[data-section]');
+	// console.log(sections)
+	const menuItems = document.querySelectorAll('.desktop-nav-item');
+	// console.log(menuItems)
+	sections.forEach((sec) => {
+		if (window.scrollY <= sec.offsetTop + sec.offsetHeight - 71) {
+			sectionArr.push(sec);
+			// console.log(sectionArr)
+			const currentSec = document.querySelectorAll(
+				`[href*="${sectionArr[0].dataset.section}"]`
+			);
+			console.log(currentSec);
+			menuItems.forEach((item) => item.classList.remove('spy'));
+			currentSec.forEach((sec) => {
+				currentSec[1].classList.add('spy');
+			});
+		}
+	});
+};
+
+window.addEventListener('scroll', handleScrollSpy);
