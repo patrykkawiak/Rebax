@@ -220,7 +220,8 @@ header {
 
 	.section_text {
 		font-size: 1.4rem;
-		line-height: 20px;
+		line-height: 25px;
+		font-weight: 300;
 		color: #494949;
 	}
 	.img {
@@ -446,7 +447,7 @@ footer {
 	gap: 3rem;
 	padding: 1rem 2rem;
 	a {
-		text-decoration: none;	
+		text-decoration: none;
 		color: white;
 		font-size: 2.5rem;
 	}
@@ -602,7 +603,10 @@ footer {
 				width: 100%;
 			}
 			.map {
-				width: 50%;
+				width: 75%;
+				iframe {
+					height: 100%;
+				}
 			}
 		}
 	}
