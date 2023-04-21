@@ -442,11 +442,12 @@ footer {
 	font-size: 1.2rem;
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	gap: 3rem;
 	padding: 1rem 2rem;
 	a {
-		text-decoration: none;
+		text-decoration: none;	
 		color: white;
-		margin-left: auto;
 		font-size: 2.5rem;
 	}
 }
@@ -585,6 +586,27 @@ footer {
 			}
 		}
 	}
+	// kontakt
+	.contact {
+		padding: 4rem 2rem;
+		.contact_container {
+			.contact_box {
+				width: 100%;
+				.contact_form {
+					width: 50%;
+				}
+			}
+			.container_for_contact_form_and_map {
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+			}
+			.map {
+				width: 50%;
+			}
+		}
+	}
+	//
 	/* nav */
 	.burger-icon {
 		display: none;
@@ -663,7 +685,8 @@ footer {
 	to {
 		opacity: 1;
 		transform: scale(1) translateY(0);
-	}}
+	}
+}
 @keyframes zoom {
 	from {
 		transform: scale(1.5);
