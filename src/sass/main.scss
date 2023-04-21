@@ -121,6 +121,10 @@ nav {
 					font-size: 1.3rem;
 					padding: 0.5rem;
 					font-weight: 300;
+					transition: font-weight 0.3s;
+				}
+				.nav-item:hover {
+					font-weight: 500;
 				}
 			}
 			.call-CTA {
@@ -134,6 +138,7 @@ nav {
 		}
 	}
 }
+
 /* Header */
 header {
 	opacity: 0;
