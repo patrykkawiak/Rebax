@@ -451,10 +451,8 @@ footer {
 }
 //
 .galery {
+	background-color: #f2f2f2;
 	padding-bottom: 4rem;
-	.section-heading {
-		padding-bottom: 4rem;
-	}
 
 	.slider-container {
 		display: flex;
@@ -463,13 +461,15 @@ footer {
 		.slider {
 			position: relative;
 			display: flex;
+			justify-content: center;
 			overflow: hidden;
 			height: 30rem;
 			width: 40rem;
+			border-radius: 8px;
 		}
 		.slider-box {
 			display: flex;
-
+			width: 100%;
 			.slider-img {
 				object-fit: cover;
 				object-position: center;
@@ -492,7 +492,7 @@ footer {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-
+			cursor: pointer;
 			i {
 				font-size: 2rem;
 			}
@@ -652,6 +652,15 @@ footer {
 	html {
 		font-size: 87.5%;
 	}
+	.galery {
+		.slider-container {
+			.slider {
+				display: block;
+				height: 40rem;
+				width: 65rem;
+			}
+		}
+	}
 }
 
 @keyframes reval {
@@ -662,7 +671,8 @@ footer {
 	to {
 		opacity: 1;
 		transform: scale(1) translateY(0);
-	}}
+	}
+}
 @keyframes zoom {
 	from {
 		transform: scale(1.5);
