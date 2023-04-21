@@ -693,6 +693,15 @@ footer {
 	html {
 		font-size: 87.5%;
 	}
+	.galery {
+		.slider-container {
+			.slider {
+				display: block;
+				height: 40rem;
+				width: 65rem;
+			}
+		}
+	}
 }
 
 @keyframes reval {
