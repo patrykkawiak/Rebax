@@ -138,6 +138,7 @@ nav {
 }
 /* Header */
 header {
+	opacity: 0;
 	padding: 4rem 2rem;
 	margin-top: 5rem;
 	.header-cnt {
@@ -176,6 +177,7 @@ header {
 }
 /* Banner first */
 .first-banner {
+	opacity: 0;
 	width: 100%;
 	height: 8rem;
 	background-color: $main-color;
@@ -199,6 +201,7 @@ header {
 }
 // SEKCJA ABOUTUS
 .aboutus {
+	opacity: 0;
 	padding: 4rem 2rem;
 	&_container {
 		display: flex;
@@ -238,6 +241,7 @@ header {
 }
 
 .second-baner {
+	opacity: 0;
 	height: 9rem;
 
 	width: 100%;
@@ -291,6 +295,7 @@ header {
 }
 
 .materials {
+	opacity: 0;
 	padding-bottom: 4rem;
 	.section-heading {
 		padding-bottom: 4rem;
@@ -377,6 +382,7 @@ header {
 
 // kontakt
 .contact {
+	opacity: 0;
 	padding: 4rem 2rem 0;
 }
 .contact_container {
@@ -464,6 +470,7 @@ footer {
 }
 //
 .galery {
+	opacity: 0;
 	background-color: #f2f2f2;
 	padding-bottom: 4rem;
 
