@@ -140,21 +140,19 @@ window.addEventListener('DOMContentLoaded', handleThirdReval);
 const handleScrollSpy = () => {
 	let sectionArr = [];
 
-	const sections = document.querySelectorAll('[data-section]');
-	// console.log(sections)
+	const sections = document.querySelectorAll('.reval-section');
 	const menuItems = document.querySelectorAll('.desktop-nav-item');
-	// console.log(menuItems)
 	sections.forEach((sec) => {
 		if (window.scrollY <= sec.offsetTop + sec.offsetHeight - 71) {
 			sectionArr.push(sec);
-			// console.log(sectionArr)
+			console.log(sectionArr)
 			const currentSec = document.querySelectorAll(
 				`[href*="${sectionArr[0].dataset.section}"]`
 			);
-			console.log(currentSec);
+			// console.log(currentSec);
 			menuItems.forEach((item) => item.classList.remove('spy'));
 			currentSec.forEach((sec) => {
-				currentSec[1].classList.add('spy');
+				sec.classList.add('spy');
 			});
 		}
 	});
