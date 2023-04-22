@@ -1,0 +1,37 @@
+.matBud {
+	margin-top: 5rem;
+}
+
+
+@media (min-width: 768px) {
+	.container {
+		margin-top: 4rem;
+		flex-direction: row;
+		gap: 2rem;
+		.left-side {
+			width: 30%;
+			height: 33.5rem;
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			.cnt-title {
+				font-size: 1.8rem;
+			}
+			.item-list {
+				display: flex;
+				flex-direction: column;
+				flex-wrap: nowrap;
+				overflow-y: scroll;
+			}
+		}
+		.right-side {
+			width: 70%;
+			overflow-y: scroll;
+			padding: 1rem 0;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 1rem;
+		}
+	}
+}
