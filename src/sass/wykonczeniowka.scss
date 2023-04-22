@@ -45,11 +45,11 @@
 		$card-items: card-img1 card-img2 card-img3 card-img4 card-img5 card-img6 card-img7 card-img8 card-img9 card-img10
 			card-img11 card-img12 card-img13 card-img14 card-img15 card-img16 card-img17;
 
-		$i: 1;
+		$i: 0;
 
 		@each $item in $card-items {
 			.#{$item} {
-				background-image: url('../../dist/img/materialybudowlane\ \(#{$i}\).png');
+				background-image: url('../../dist/img/materialywykonczeniowe\ \(#{$i}\).jpg');
 			}
 			$i: $i + 1;
 		}
