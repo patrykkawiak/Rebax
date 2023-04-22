@@ -196,10 +196,12 @@ header {
 		color: white;
 		padding: 0 1rem;
 		.banner-title {
-			font-size: 1.2rem;
+			font-size: 1.4rem;
+			font-weight: 500;
 		}
 		.banner-text {
-			font-weight: 300;
+			font-size: 1.2rem;
+			font-weight: 350;
 		}
 	}
 	.banner-item:nth-child(3) {
@@ -288,7 +290,8 @@ header {
 				background: transparent;
 				border-radius: 8px;
 				border: 2px solid $font-white;
-				font-size: 1rem;
+				font-size: 1.2rem;
+				font-weight: 500;
 			}
 		}
 		.baner-item:nth-child(3) {
@@ -371,7 +374,7 @@ header {
 
 				.card-heading {
 					font-size: 1.8rem;
-					font-weight: 500;
+					font-weight: 600;
 				}
 
 				.card-text {
@@ -389,7 +392,8 @@ header {
 					justify-content: center;
 					align-items: center;
 					padding: 0.7rem;
-					font-size: 1.3rem;
+					font-size: 1.4rem;
+					font-weight: 500;
 				}
 			}
 		}
@@ -409,7 +413,7 @@ header {
 		display: flex;
 		flex-direction: column;
 		.contact_name {
-			font-size: 1.4rem;
+			font-size: 1.5rem;
 			font-weight: 600;
 		}
 	}
@@ -418,9 +422,10 @@ header {
 		flex-direction: column;
 		gap: 0.5rem;
 		.contact_text {
-			font-size: 1.4rem;
+			font-size: 1.3rem;
 			line-height: 18px;
 			color: #494949;
+			font-weight: 400;
 			.emaillink {
 				text-decoration: none;
 				color: #494949;
@@ -506,7 +511,7 @@ footer {
 //
 .galery {
 	opacity: 0;
-	background-color: #f2f2f2;
+	background-color: #e4e4e470;
 	padding-bottom: 4rem;
 	.section-heading {
 		padding-bottom: 4rem;
