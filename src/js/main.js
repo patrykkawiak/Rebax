@@ -145,21 +145,15 @@ const handleScrollSpy = () => {
 	sections.forEach((sec) => {
 		if (window.scrollY <= sec.offsetTop + sec.offsetHeight - 71) {
 			sectionArr.push(sec);
-			
-			menuItems.forEach((item) => {item.classList.remove('spy')
-		});
-		const currentSec = document.querySelectorAll(
-			`[href*="${sectionArr[0].dataset.section}"]`
-		);
-		
+			console.log(sectionArr)
+			const currentSec = document.querySelectorAll(
+				`[href*="${sectionArr[0].dataset.section}"]`
+			);
+			// console.log(currentSec);
+			menuItems.forEach((item) => item.classList.remove('spy'));
 			currentSec.forEach((sec) => {
-				if(sec.classList.contains('desktop-nav-item')){
-
-					sec.classList.add('spy');
-				}
+				sec.classList.add('spy');
 			});
-		
-		
 		}
 	});
 };

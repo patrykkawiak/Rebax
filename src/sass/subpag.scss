@@ -5,7 +5,6 @@ section {
 	margin-bottom: 4rem;
 }
 
-
 .container {
 	margin-top: 4rem;
 	display: flex;
@@ -48,15 +47,13 @@ section {
 	}
 }
 
-
-
 @media (min-width: 768px) {
 	.container {
 		margin-top: 4rem;
 		flex-direction: row;
 		gap: 2rem;
 		.left-side {
-			width: 30%;
+			width: 20%;
 			height: 33.5rem;
 			display: flex;
 			flex-direction: column;
@@ -72,7 +69,7 @@ section {
 			}
 		}
 		.right-side {
-			width: 70%;
+			width: 80%;
 			overflow-y: scroll;
 			padding: 1rem 0;
 			display: flex;
