@@ -28,7 +28,7 @@ body {
 	padding: 0.8rem 0.3rem;
 	.bar {
 		width: 100%;
-		height: 0.2rem;
+		height: 0.1rem;
 		background-color: black;
 		transition: opacity 0.3s, transform 0.3s;
 	}
@@ -126,6 +126,10 @@ nav {
 				.nav-item:hover {
 					font-weight: 500;
 				}
+			}
+			.fb {
+				color: black;
+				font-size: 2rem;
 			}
 			.call-CTA {
 				text-decoration: none;
@@ -317,12 +321,21 @@ header {
 			flex-direction: column;
 			.card-img {
 				height: 15rem;
-				background-image: url('../../dist/img/bgi\(1\).jpg');
 				background-size: cover;
 				background-position: center;
-
 				width: 100%;
 			}
+
+			$card-img: card1 card2 card3 card4 card5 card6;
+
+			$c: 1;
+			@each $card in $card-img {
+				.#{$card} {
+					background-image: url('../../dist/img/card-img\ \(#{$c}\).png');
+				}
+				$c: $c + 1;
+			}
+
 			.card-content {
 				position: relative;
 
@@ -592,6 +605,11 @@ footer {
 				height: 35rem;
 				width: 45rem;
 			}
+		}
+	}
+	.burger-icon {
+		.bar {
+			height: 0.15rem;
 		}
 	}
 }
