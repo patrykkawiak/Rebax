@@ -43,6 +43,10 @@ section {
 			background-position: center;
 			background-size: 90%;
 			background-repeat: no-repeat;
+			transition: transform 0.3s;
+		}
+		.card:hover {
+			transform: scale(1.1);
 		}
 	}
 }
