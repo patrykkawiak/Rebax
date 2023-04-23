@@ -145,14 +145,14 @@ const handleScrollSpy = () => {
 	sections.forEach((sec) => {
 		if (window.scrollY <= sec.offsetTop + sec.offsetHeight - 71) {
 			sectionArr.push(sec);
-			console.log(sectionArr)
 			const currentSec = document.querySelectorAll(
 				`[href*="${sectionArr[0].dataset.section}"]`
 			);
-			// console.log(currentSec);
 			menuItems.forEach((item) => item.classList.remove('spy'));
 			currentSec.forEach((sec) => {
-				sec.classList.add('spy');
+				if (sec.classList.contains('desktop-nav-item')) {
+					sec.classList.add('spy');
+				}
 			});
 		}
 	});
