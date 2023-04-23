@@ -14,3 +14,13 @@
 		}
 	}
 }
+
+@media (min-width: 768px) {
+	.container {
+		.left-side {
+			.item-list {
+				overflow-y: auto;
+			}
+		}
+	}
+}
