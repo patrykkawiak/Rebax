@@ -118,13 +118,13 @@ nav {
 				.nav-item {
 					text-decoration: none;
 					color: #000;
-					font-size: 1.3rem;
+					font-size: 1.4rem;
 					padding: 0.5rem;
 					font-weight: 300;
-					transition: font-weight 0.3s;
+					transition: scale 0.5s;
 				}
 				.nav-item:hover {
-					font-weight: 500;
+					scale: (1.1);
 				}
 			}
 			.fb {
@@ -245,6 +245,7 @@ header {
 			width: 100%;
 			border-radius: 8px;
 			object-fit: cover;
+			object-position: center;
 		}
 	}
 }
@@ -350,7 +351,7 @@ header {
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
-				height: 18rem;
+				height: 22rem;
 
 				.card-icon {
 					position: absolute;
@@ -731,7 +732,7 @@ footer {
 		.materials-cards {
 			.materials-card {
 				max-width: 24rem;
-				.card-content{
+				.card-content {
 					height: 23rem;
 				}
 			}
