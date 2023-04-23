@@ -1,9 +1,5 @@
-
 .container {
-	
 	.right-side {
-		
-
 		$card-items: card-img1 card-img2 card-img3;
 
 		$i: 1;
@@ -17,4 +13,19 @@
 	}
 }
 
-
+@media (min-width: 768px) {
+	.container {
+		.left-side {
+			.item-list {
+				overflow-y: auto;
+			}
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		.right-side {
+			overflow-y: auto;
+		}
+	}
+}
