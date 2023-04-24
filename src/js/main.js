@@ -1,159 +1,152 @@
-const burgerIcon = document.querySelector('.burger-icon')
-const mobileNav = document.querySelector('.mobile-nav')
-const navList = document.querySelector('.nav-list')
-const navItem = document.querySelectorAll('.mobile-nav .nav-list .nav-item')
+const burgerIcon = document.querySelector('.burger-icon');
+const mobileNav = document.querySelector('.mobile-nav');
+const navList = document.querySelector('.nav-list');
+const navItem = document.querySelectorAll('.mobile-nav .nav-list .nav-item');
 
 /* Nav Open */
 burgerIcon.addEventListener('click', () => {
-	burgerIcon.classList.toggle('active')
-	mobileNav.classList.toggle('active')
-	navList.classList.toggle('active')
-})
+	burgerIcon.classList.toggle('active');
+	mobileNav.classList.toggle('active');
+	navList.classList.toggle('active');
+});
 
 /* Nav Close */
 
-navItem.forEach(item => {
+navItem.forEach((item) => {
 	item.addEventListener('click', () => {
 		if (navList.classList.contains('active')) {
-			navList.classList.toggle('active')
-			burgerIcon.classList.toggle('active')
-			mobileNav.classList.toggle('active')
+			navList.classList.toggle('active');
+			burgerIcon.classList.toggle('active');
+			mobileNav.classList.toggle('active');
 		}
-	})
-})
+	});
+});
 
 /* Footer Year */
-/* const setCurrentDate = () => {
-	const footerYear = document.querySelector('.footer-year')
-	const date = new Date()
-	const year = date.getFullYear()
-	footerYear.textContent = year
-	console.log(footerYear)
-}
-setCurrentDate()
- */
-const prevBtn = document.querySelector('.prev_btn')
-const nextBtn = document.querySelector('.next_btn')
-const sliderBox = document.querySelector('.slider-box')
-const images = document.querySelectorAll('.slider-img')
-let sliderSize
+const setCurrentDate = () => {
+	const footerYear = document.querySelector('.year');
+	const date = new Date();
+	const year = date.getFullYear();
+	footerYear.textContent = year;
+	console.log(footerYear);
+};
+setCurrentDate();
 
-let index = 0
-const autoSpeed = 4000
+const prevBtn = document.querySelector('.prev_btn');
+const nextBtn = document.querySelector('.next_btn');
+const sliderBox = document.querySelector('.slider-box');
+const images = document.querySelectorAll('.slider-img');
+let sliderSize;
 
-// const dots = document.querySelector('.dots')
-// const dotsArr = []
+let index = 0;
+let picture = 1;
+const autoSpeed = 4000;
 
-// const createAllDots = () => {
-// 	for (let item = 0; item < images.length; item++) {
-// 		const newDot = document.createElement('div')
-// 		newDot.classList.add('dot')
-// 		dots.append(newDot)
-// 		dotsArr.push(newDot)
-// 	}
-// 	dotsArr[0].classList.add('active-dot')
-// }
+const counter = document.querySelector('.counter');
+counter.textContent = `${picture} / ${images.length}`;
 
 const handleCarousel = () => {
-	index++
-	changeImage()
-}
-
-let startCarousel = setInterval(handleCarousel, autoSpeed)
+	index++;
+	picture++;
+	changeImage();
+};
+let startCarousel = setInterval(handleCarousel, autoSpeed);
 
 const changeImage = () => {
-	sliderSize = document.querySelector('.slider-img').offsetWidth
+	sliderSize = document.querySelector('.slider-img').offsetWidth;
 
 	if (index > images.length - 1) {
-		index = 0
+		index = 0;
+		picture = 1;
 	} else if (index < 0) {
-		index = images.length - 1
+		index = images.length - 1;
+		picture = images.length;
 	}
 
-	// for (let i = 0; i < images.length; i++) {
-	// 	dotsArr[i].classList.remove('active-dot')
-	// }
-	// dotsArr[index].classList.add('active-dot')
+	counter.textContent = `${picture} / ${images.length}`;
 
 	for (let i = 0; i < images.length; i++) {
-		images[i].classList.remove('slider-animation')
+		images[i].classList.remove('slider-animation');
 	}
-	images[index].classList.add('slider-animation')
+	images[index].classList.add('slider-animation');
 
-	sliderBox.style.transform = `translateX(${-index * sliderSize}px)`
-}
+	sliderBox.style.transform = `translateX(${-index * sliderSize}px)`;
+};
 
 const handleRightArrow = () => {
-	index++
-	resetInterval()
-}
+	index++;
+	picture++;
+	resetInterval();
+};
 const handleLeftArrow = () => {
-	index--
-	resetInterval()
-}
+	index--;
+	picture--;
+	resetInterval();
+};
 
 const resetInterval = () => {
-	changeImage()
-	clearInterval(startCarousel)
-}
+	changeImage();
+	clearInterval(startCarousel);
+};
 
-// createAllDots()
-nextBtn.addEventListener('click', handleRightArrow)
-prevBtn.addEventListener('click', handleLeftArrow)
+nextBtn.addEventListener('click', handleRightArrow);
+prevBtn.addEventListener('click', handleLeftArrow);
 
 // scroll
 
-const revalSection = document.querySelectorAll('.reval-section')
+const revalSection = document.querySelectorAll('.reval-section');
 
 const handleFirstReval = () => {
-	const revalSection = document.querySelector('.reval-section')
+	const revalSection = document.querySelector('.reval-section');
 
 	if (revalSection.offsetTop - window.scrollY < window.innerHeight - 150) {
-		revalSection.classList.add('reval')
+		revalSection.classList.add('reval');
 	}
-}
+};
 const handleSecondReval = () => {
 	setTimeout(() => {
-		revalSection[1].classList.add('reval')
-	}, 400)
-}
+		revalSection[1].classList.add('reval');
+	}, 400);
+};
 const handleThirdReval = () => {
 	setTimeout(() => {
-		revalSection[2].classList.add('reval')
-	}, 800)
-}
+		revalSection[2].classList.add('reval');
+	}, 800);
+};
 const handleReval = () => {
-	revalSection.forEach(sec => {
+	revalSection.forEach((sec) => {
 		if (sec.offsetTop - window.scrollY < window.innerHeight - 150) {
-			sec.classList.add('reval')
+			sec.classList.add('reval');
 		}
-	})
-}
+	});
+};
 
-window.addEventListener('scroll', handleReval)
-window.addEventListener('DOMContentLoaded', handleFirstReval)
-window.addEventListener('DOMContentLoaded', handleSecondReval)
-window.addEventListener('DOMContentLoaded', handleThirdReval)
+window.addEventListener('scroll', handleReval);
+window.addEventListener('DOMContentLoaded', handleFirstReval);
+window.addEventListener('DOMContentLoaded', handleSecondReval);
+window.addEventListener('DOMContentLoaded', handleThirdReval);
 
 // scroll spy
 
 const handleScrollSpy = () => {
-	let sectionArr = []
+	let sectionArr = [];
 
-	const sections = document.querySelectorAll('.reval-section')
-	const menuItems = document.querySelectorAll('.desktop-nav-item')
-	sections.forEach(sec => {
+	const sections = document.querySelectorAll('.reval-section');
+	const menuItems = document.querySelectorAll('.desktop-nav-item');
+	sections.forEach((sec) => {
 		if (window.scrollY <= sec.offsetTop + sec.offsetHeight - 71) {
-			sectionArr.push(sec)
-			const currentSec = document.querySelectorAll(`[href*="${sectionArr[0].dataset.section}"]`)
-			menuItems.forEach(item => item.classList.remove('spy'))
-			currentSec.forEach(sec => {
+			sectionArr.push(sec);
+			const currentSec = document.querySelectorAll(
+				`[href*="${sectionArr[0].dataset.section}"]`
+			);
+			menuItems.forEach((item) => item.classList.remove('spy'));
+			currentSec.forEach((sec) => {
 				if (sec.classList.contains('desktop-nav-item')) {
-					sec.classList.add('spy')
+					sec.classList.add('spy');
 				}
-			})
+			});
 		}
-	})
-}
+	});
+};
 
-window.addEventListener('scroll', handleScrollSpy)
+window.addEventListener('scroll', handleScrollSpy);

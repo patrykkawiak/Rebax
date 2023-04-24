@@ -19,25 +19,6 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
-/* width */
-body::-webkit-scrollbar {
-	width: 10px;
-  }
-  
-  /* Track */
-  body::-webkit-scrollbar-track {
-	background: #eeeeee;
-  }
-  
-  /* Handle */
-  body::-webkit-scrollbar-thumb {
-	background: $main-color;
-  }
-  
-  /* Handle on hover */
-  body::-webkit-scrollbar-thumb:hover {
-	background: #555;
-  }
 .burger-icon {
 	width: 3rem;
 	height: 3rem;
@@ -187,13 +168,23 @@ header {
 					font-size: 1.2rem;
 					font-weight: 600;
 					border-radius: 5px;
+					transition: color 0.3s, background-color 0.3s;
 				}
 				.btn-left {
 					color: white;
 					background-color: $main-color;
+					border: 1px solid $main-color;
+				}
+				.btn-left:hover {
+					background: transparent;
+					color: #000;
 				}
 				.btn-right {
 					border: 1px solid $main-color;
+				}
+				.btn-right:hover {
+					background: $main-color;
+					color: $font-white;
 				}
 			}
 		}
@@ -415,18 +406,19 @@ header {
 					padding: 0.7rem;
 					font-size: 1.4rem;
 					font-weight: 500;
+					transition: transform .3s;
+				}
+				.card-link:hover {
+					transform: scale(.95);
 				}
 			}
 		}
 	}
 }
-
-// kontakt
 .contact {
 	opacity: 0;
 	padding: 4rem 2rem 0;
 }
-
 .contact_container {
 	display: flex;
 	flex-direction: column;
@@ -511,9 +503,6 @@ header {
 		margin-top: 2rem;
 	}
 }
-//
-
-// FOOTER
 footer {
 	background-color: $main-color;
 	color: white;
@@ -529,7 +518,7 @@ footer {
 		font-size: 2.5rem;
 	}
 }
-//
+
 .galery {
 	opacity: 0;
 	background-color: #e4e4e470;
@@ -587,23 +576,19 @@ footer {
 			right: 0;
 		}
 
-		.dots {
+		.counter {
 			position: absolute;
 			left: 50%;
-			top: 95%;
+			top: 94%;
 			transform: translate(-50%, -50%);
 			display: flex;
 			align-items: center;
+			justify-content: center;
+			color: white;
+			font-size: 1.5rem;
+			background-color: #008024b0;
 			gap: 0.5rem;
-			.dot {
-				height: 0.5rem;
-				width: 2rem;
-				background-color: $font-white;
-				border-radius: 8px;
-			}
-			.active-dot {
-				background-color: $main-color;
-			}
+			padding: 0.5rem 1rem;
 		}
 	}
 }
@@ -653,7 +638,6 @@ footer {
 				gap: 4rem;
 				.aboutus_content {
 					width: 50%;
-					// padding: 0 3rem;
 				}
 				.img {
 					width: 50%;
@@ -666,7 +650,6 @@ footer {
 				margin-bottom: 4rem;
 				.aboutus_content {
 					width: 50%;
-					// padding: 0 3rem;
 				}
 				.img {
 					width: 50%;
@@ -674,7 +657,6 @@ footer {
 			}
 		}
 	}
-	// kontakt
 	.contact {
 		padding: 4rem 2rem;
 		.contact_container {
@@ -700,8 +682,6 @@ footer {
 			}
 		}
 	}
-	//
-	/* nav */
 	.burger-icon {
 		display: none;
 	}
@@ -717,7 +697,6 @@ footer {
 			}
 		}
 	}
-	/* header */
 	header {
 		.header-cnt {
 			display: flex;

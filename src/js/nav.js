@@ -21,3 +21,14 @@ navItem.forEach((item) => {
 		}
 	});
 });
+
+// footer-year
+
+const setCurrentDate = () => {
+	const footerYear = document.querySelector('.year');
+	const date = new Date();
+	const year = date.getFullYear();
+	footerYear.textContent = year;
+	console.log(footerYear);
+};
+setCurrentDate();
