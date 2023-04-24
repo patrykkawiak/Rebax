@@ -239,7 +239,7 @@ header {
 	.img {
 		display: flex;
 		flex-direction: column;
-
+		justify-content: center;
 		img {
 			height: 25rem;
 			width: 100%;
@@ -541,7 +541,7 @@ footer {
 			}
 		}
 		.slider-animation {
-			animation: 1.5s zoom ease forwards;
+			animation: 0.7s zoom ease forwards;
 		}
 		.slider-btn {
 			position: absolute;
