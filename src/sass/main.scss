@@ -512,6 +512,19 @@ footer {
 	justify-content: center;
 	gap: 3rem;
 	padding: 1rem 2rem;
+	.info {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		font-size: 1rem;
+		gap: 1rem;
+
+		a{font-size: 1rem;
+		text-decoration: none;
+		color: #c0c0c0;
+		}
+	}
 	a {
 		text-decoration: none;
 		color: white;
