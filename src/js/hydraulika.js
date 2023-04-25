@@ -1,9 +1,8 @@
 const cardsCnt = document.querySelector('.right-side')
 
-const producers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+const producers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
 const links = [
-	'https://afriso.pl',
-	'https://armakan.pl',
+	'https://mcalpine.pl',
 	'https://dafi.pl',
 	'https://wilo.com/pl/pl/',
 	'https://www.saunierduval.pl/dla-uzytkownikow/',
@@ -23,6 +22,8 @@ const links = [
 	'https://www.immergas.pl',
 	'https://www.viega.pl/pl/homepage.html',
 	'http://wijas.com.pl/',
+	'https://afriso.pl',
+	'https://armakan.pl',
 ]
 
 const createCards = () => {
