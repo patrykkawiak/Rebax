@@ -541,6 +541,7 @@ footer {
 				object-position: center;
 				height: 100%;
 				width: 100%;
+				flex-shrink: 0;
 			}
 		}
 		.slider-animation {
@@ -707,6 +708,7 @@ footer {
 				display: block;
 				max-width: 30rem;
 				object-fit: contain;
+				flex-shrink: 0;
 			}
 		}
 	}
