@@ -22,7 +22,7 @@ const links = [
 
 const createCards = () => {
 	producers.forEach(el => {
-		cardsCnt.innerHTML += `  <a href="${links[el - 1]}" target="_blank" class="card card-img${el}"></a>`
+		cardsCnt.innerHTML += `  <a href="${links[el - 1]}" target="_blank" rel="noopener" class="card card-img${el}"></a>`
 	})
 }
 
